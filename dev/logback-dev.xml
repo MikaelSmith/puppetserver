@@ -5,8 +5,19 @@
         </encoder>
     </appender>
 
+    <appender name="PCP_ACCESS" class="ch.qos.logback.core.FileAppender">
+        <file>./target/logs/pcp-broker-messages.log</file>
+        <encoder>
+            <pattern>[%d] %m%n</pattern>
+        </encoder>
+    </appender>
+
     <logger name="org.eclipse.jetty" level="info"/>
     <logger name="org.apache.http" level="info"/>
+
+    <logger name="puppetlabs.pcp.broker.pcp_access" level="error">
+        <appender-ref ref="PCP_ACCESS"/>
+    </logger>
 
     <root level="debug">
         <appender-ref ref="STDOUT" />

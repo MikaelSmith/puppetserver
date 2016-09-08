@@ -58,6 +58,7 @@
                  ;; in different versions of the three different logback artifacts
                  [net.logstash.logback/logstash-logback-encoder]
 
+                 [puppetlabs/pcp-broker "0.8.5-SNAPSHOT"]
                  [puppetlabs/jruby-utils "0.5.0"]
                  [puppetlabs/trapperkeeper]
                  [puppetlabs/trapperkeeper-authorization]
